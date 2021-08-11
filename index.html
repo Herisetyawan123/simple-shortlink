@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script/qrcode.js"></script>
+    <title>Generator QR</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">QR Code Generator</h2>
+        <div class="box">
+                <input id="link" type="text" name="link" placeholder="Drop your link">
+                <input type="submit" value="Generate" class="btn" onclick="main()">
+                <div class="frame   ">
+                    <div id="qrbox"></div>
+                </div>
+        </div>
+    </div>
+
+
+    <script>
+        var link = document.getElementById('link');
+        var btn = document.getElementsByClassName('btn');
+        var frame = document.getElementsByClassName('frame');
+        var qrcode = new QRCode(document.getElementById('qrbox'), {
+                        width : 180,
+                        height : 180
+                    })
+
+        frame[0].style.display = 'none';
+
+        const getText = () => {
+            if(!link.value){
+                alert("Tolong masukan text!!");
+                link.focus();
+                return false;
+            }else{
+                return link.value
+            }
+        }
+
+        function main(){
+            let text = getText();
+            if(text){
+                frame[0].style.display = 'block';
+                qrcode.makeCode(text);
+                text = ""
+                console.log(text)
+            }
+        }
+        // qrcode.makeCode("https://google.com");
+
+    </script>
+</body>
+</html>
