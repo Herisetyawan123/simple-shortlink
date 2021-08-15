@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+.title{
+    /* font-family:'Bungee'; */
+    font-family: 'Bungee', cursive;
+    margin-bottom: 60px;
+}
+.box{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    padding: 60px 0;
+    border-radius: 11px;
+    background: #e0e0e0;
+    box-shadow:  30px 30px 59px #bebebe,
+             -30px -30px 59px #ffffff;
+}
+
+
+.box input[name=link]{
+    padding: 0 10px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    width: 250px;
+    border-radius: 11px;
+    
+    border-radius: 8px;
+    background: #ffffff78;
+    box-shadow: inset 10px 10px 11px #d9d9d9,
+                inset -5px -5px 11px #ffffff;
+    /* background: #ffffff78; 
+    box-shadow:  30px 30px 59px #bebebe,
+                -30px -30px 59px #ffffff; */
+    box-sizing: border-box;
+}
+
+input[name=link]:focus{
+    outline: none;
+    border: 2px solid #86b7fe;
+    border-radius: 10px;
+
+}
+
+input[type=submit]{
+    margin-top: 30px;
+    color: #fff;
+    background: #198754;;
+    box-shadow:  5px 5px 9px #5b6269,
+    -5px -5px 9px #afb4b8;  
+    border: none;
+    padding: .375rem .75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1rem;
+    border-radius:  .25rem;
+    cursor: pointer;
+}
+
+.box input[type=submit]:hover{
+    color: #fff;
+    background-color: #157347;;
+    border-color: #146c43;
+}
+
+
+.box form{
+    display: contents;
+}
+.copied{
+    background-color: #157347 !important;
+}

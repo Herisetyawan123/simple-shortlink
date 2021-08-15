@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generator QR</title>
+</head>
+<body>
+     
+    <div class="container">
+        <h2 class="title">Short Link Generator</h2>
+        <div class="box">
+            <form action="/" method="post">
+                <input id="link" type="text" name="link" placeholder="Drop your link" value="<% if (typeof urlShort != 'undefined') { %><%= urlShort %><% } %>" required>
+                
+                <input type="submit" value="<% if (typeof urlShort != 'undefined') { %>copy<% }else{%>Generate<% } %>" class="btn <% if (typeof urlShort != 'undefined') { %>copy<% } %>">
+            </form>
+    
+    <a href="/" class="btn" style="margin-top: 20px; padding: 10px 20px; background-color: #157347; border-radius:  .25rem; color: white; text-decoration: none; box-shadow:  5px 5px 9px #5b6269,
+    -5px -5px 9px #afb4b8;">Reload</a>
+        </div>
+    </div>
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>
